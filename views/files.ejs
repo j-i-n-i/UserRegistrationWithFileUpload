@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uploaded Files</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+        color:#33821c;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #337ab7;
+    }
+
+    a:hover {
+      color: #23527c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click to download the Files</h1>
+  <ul>
+    <% files.forEach(file => { %>
+      <li><a href="/download/<%= file %>"><%= file %></a></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
